@@ -1,0 +1,82 @@
+// Скругление углов (border-radius)
+@mixin border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radius: $radius
+  border-radius: $radius
+// Пример:
+// @include border-radius(3px);
+
+
+//Длительность смены стиля (transition-duration)
+@mixin duration($a)
+  -webkit-transition-duration: $a
+  -o-transition-duration: $a
+  -moz-transition-duration: $a
+  transition-duration: $a
+// Пример:
+//@include duration(2s)
+
+
+//Поворот (rotation)
+@mixin rotate($d)
+  transform:rotate($d+deg)
+  -ms-transform:rotate($d+deg)
+  -webkit-transform:rotate($d+deg)
+  -o-transform: rotate($d+deg)
+//Пример:
+//@include rotate(-90)
+
+
+//Тень объектов (box-shadow)
+@mixin box-shadow($left, $top, $blur, $color)
+  -moz-box-shadow: $left $top $blur $color
+  -webkit-box-shadow: $left $top $blur $color
+  box-shadow: $left $top $blur $color
+//Пример:
+//@include box-shadow(0, 5px, 15px, #ff6600)
+
+
+//Прозрачность (opacity)
+//Функция получает параметр прозрачности как процент без значка %.
+@mixin opacity($p)
+  opacity: $p*0.01
+  -webkit-opacity: $p*0.01
+  -khtml-opacity: $p*0.01
+  -moz-opacity: $p*0.01
+  filter:alpha(opacity=$p)
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$p)"
+//Пример:
+// @include opacity(50);
+
+
+//Фон с градиентом
+//Эта функция «нарисует» объекту вертикальный кроссбраузерный CSS3 градиент.
+//Передаем верхний цвет и нижний.
+@mixin bg($top, $btm)
+  background: $top
+  background: -moz-linear-gradient(top, $top 0%, $btm 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$btm))
+  background: -webkit-linear-gradient(top, $top 0%,$btm 100%)
+  background: -o-linear-gradient(top, $top 0%,$btm 100%)
+  background: -ms-linear-gradient(top, $top 0%,$btm 100%)
+  background: linear-gradient(to bottom, $top 0%,$btm 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top', endColorstr='$btm',GradientType=0)
+//Пример:
+//@incude bg(#aaaaaa, #efefef)
+
+
+//Цвет границ (border-left, right…)
+//Функция получает цвет границы и место (сверху, снизу, слева, справа или со всех сторон),
+//куда его применить к объекту.
+@mixin border($place, $color, $width)
+  @if $place == 'all'
+    border: $width solid $color
+  @else
+    border-#{$place}: $width solid $color
+// Примеры:
+// @include border(bottom, #ff00ff, 2px); // ужасная фиолетовая граница снизу
+// @include border(left, darkred, 1px); // темно-красная граница слева
+// @include border(all, #000, 1px); // черная граница по всему периметру
+// Для некоторых проектов подобные функции тоже можно упростить:
+// @mixin border($place, $color) {...}

@@ -1,0 +1,14 @@
+/* font-family: "Lato" */
+@import url('http://fonts.googleapis.com/css?family=Lato:400,700,300')
+
+/* font-family: "Roboto" */
+@each $font-face in "RobotoRegular", "RobotoLight", "RobotoMedium", "RobotoBold"
+  @font-face
+    font-family: $font-face
+    font-style: normal
+    font-weight: normal
+    src: url('.../fonts/#{$font-face}/#{$font-face}.eot')
+    src: url('.../fonts/#{$font-face}/#{$font-face}.eot?') format('eot')
+    src: url('.../fonts/#{$font-face}/#{$font-face}.woff') format('woff')
+    src: url('.../fonts/#{$font-face}/#{$font-face}.ttf') format('truetype')
+
