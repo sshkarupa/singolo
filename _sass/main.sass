@@ -1,0 +1,399 @@
+
+
+/* font-family: "Lato" */
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,300)
+
+$font-size-base: 18
+$font-family-base: Lato, sans-serif
+$color-base: #767e9e
+$color-title: #666d89
+$scarlet: #eb5055
+$sapphire: #303441
+$light-grey: #f2f2f2
+$color-placeholder-tx: #f48c8f
+$color-placeholder-bg: #ca4549
+
+$max-width: 1020
+
+@mixin font-size-em($size)
+  font-size: $size / $font-size-base * 1em
+
+@mixin line-height-em($size)
+  line-height: $size / $font-size-base * 1em
+
+*
+  margin: 0
+  padding: 0
+
+// placeholders //
+
+*::-webkit-input-placeholder
+  color: $color-placeholder-tx
+  opacity: 1
+
+*:-moz-placeholder
+  color: $color-placeholder-tx
+  opacity: 1
+
+::-moz-placeholder
+  color: $color-placeholder-tx
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: $color-placeholder-tx
+  opacity: 1
+
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+
+body input:required:valid,
+body textarea:required:valid
+
+body
+  font-family: $font-family-base
+  font-size: $font-size-base * 1px
+  color: $color-base
+  line-height: 25px
+  letter-spacing: 10/1000*1em
+
+.hidden
+  display: none
+
+
+h2
+  @include font-size-em(30)
+  font-weight: 900
+  margin-bottom: 31px
+
+h3
+  @include font-size-em(18)
+  font-weight: 900
+  margin-bottom: 15px
+
+p
+  margin-bottom: 46px
+  font-weight: 300
+
+small
+  font-weight: 400
+  @include font-size-em(12)
+  line-height: 1.3em
+
+.container
+  max-width: $max-width * 1px
+
+.wrapper
+  margin: 67px 40px
+
+.wrapper_side
+  margin: 0 40px
+
+.header
+  padding: 35px 0
+  background-color: $sapphire
+  color: white
+//position: fixed
+//width: 100%
+//top: 0
+//z-index: 10
+
+
+.logo
+  float: left
+  text-transform: uppercase
+  @include font-size-em(25)
+  font-weight: 700
+  span
+    color: $scarlet
+
+.menu-button
+  float: right
+  padding: 0 4px
+  margin-left: 20px
+  @include font-size-em(20)
+  background-color: transparent
+  border: 1px solid
+
+
+.main-menu
+  float: right
+  @include font-size-em(12)
+  font-weight: 700
+  text-transform: uppercase
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+  li
+    display: inline-block
+  a
+    color: white
+    margin-left: 18px
+  a:hover
+    color: $scarlet
+
+.main-menu .active a
+  color: $scarlet
+
+.slider
+  display: inline
+  width: 100%
+
+#owl-demo .item img
+  display: block
+  width: 100%
+  height: auto
+
+.slide
+  margin: 0 54px
+
+.prev-narrow, .next-narrow
+  position: absolute
+  top: 50%
+  cursor: pointer
+
+.prev-narrow
+  left: 0
+
+.next-narrow
+  right: 0
+
+.section
+  background-color: $light-grey
+
+.section_dark
+  background-color: $sapphire
+
+.section_red
+  background-color: $scarlet
+  color: white
+
+.skills
+  margin-bottom: 37px
+  line-height: 1.3em
+
+
+.portfolio p
+  margin-bottom: 21px
+
+
+.portfolio__nav
+  margin-bottom: 9px
+  li
+    list-style: none
+    display: inline
+    @include font-size-em(11)
+    padding: 3px 7px
+    margin-right: 10px
+    border: 1px solid
+    border-radius: 5px
+  li:hover
+    border: 1px solid white
+  a
+    color: $color-base
+  a:hover
+    color: white
+  .active
+    color: white
+    a
+      color: white
+
+.portfolio__item
+  margin: 0 auto
+  padding: 10px
+
+
+
+.person
+  display: inline-block
+  img
+    margin-bottom: 17px
+
+.person__name
+  color: $color-title
+  margin-bottom: 16px
+
+.person__description
+  margin-bottom: 26px
+  min-height: 75px
+  @media screen and (max-width: 768px)
+    min-height: 0
+
+.person__social
+  float: left
+  margin-bottom: 28px
+  display: block
+
+.contact-form
+  input, textarea, button
+    display: inline-block
+    background-color: $color-placeholder-bg
+    border: none
+    margin-bottom: 15px
+    padding: 13px 15px
+    border-radius: 5px
+    @include font-size-em(12)
+  input, textarea
+    width: 100%
+  textarea
+    min-height: 200px
+  button
+    width: 50%
+    text-transform: uppercase
+    color: $color-placeholder-tx
+
+
+
+.contact__desciption
+  margin-bottom: 20px
+
+.contact__location
+  list-style: none
+  @include font-size-em(12)
+  font-weight: 400
+  padding-bottom: 1px
+  a
+    color: white
+
+.contact__location li
+  margin: 0
+
+.contact__city:before,
+.contact__phone:before,
+.contact__email:before
+  background-image: url(../img/spritesheet.png)
+  background-repeat: no-repeat
+  display: block
+  margin: 4px 12px 0px 1px
+  content: ""
+  float: left
+
+.contact__city:before
+  width: 13px
+  height: 14px
+  background-position: -142px -47px
+
+.contact__phone:before
+  width: 13px
+  height: 11px
+  background-position: -143px -102px
+  margin-top: 5px
+
+.contact__email:before
+  width: 13px
+  height: 8px
+  background-position: -160px -47px
+  margin-top: 7px
+
+
+
+
+footer
+  background-color: $sapphire
+
+.footer_copyright
+  @include font-size-em(12)
+  padding: 32px 0
+  font-weight: 400
+  float: left
+
+.footer__social
+  float: right
+  padding: 22px 0
+  display: block
+
+
+.social-buttons
+  display: inline-block
+  margin: 0 2px
+
+// sprites //
+
+.sprite
+  background-image: url(../img/spritesheet.png)
+  background-repeat: no-repeat
+  display: block
+
+.sprite-facebook
+  width: 33px
+  height: 33px
+  background-position: -74px -5px
+
+.sprite-google
+  width: 33px
+  height: 33px
+  background-position: -116px -5px
+
+.sprite-linkedin
+  width: 33px
+  height: 33px
+  background-position: -158px -5px
+
+.sprite-twitter
+  width: 33px
+  height: 33px
+  background-position: -5px -74px
+
+.sprite-inovative
+  width: 59px
+  height: 59px
+  background-position: -74px -47px
+
+.sprite-custom
+  width: 59px
+  height: 59px
+  background-position: -5px -5px
+
+.sprite-responsive
+  width: 59px
+  height: 59px
+  background-position: -74px -116px
+
+.sprite-star
+  width: 59px
+  height: 59px
+  background-position: -200px -5px
+
+.sprite-support
+  width: 59px
+  height: 59px
+  background-position: -190px -74px
+
+.sprite-love
+  width: 59px
+  height: 59px
+  background-position: -5px -116px
+
+.sprite-location
+  width: 7px
+  height: 11px
+  background-position: -143px -47px
+
+.sprite-phone
+  width: 11px
+  height: 11px
+  background-position: -143px -102px
+
+.sprite-mail
+  width: 13px
+  height: 8px
+  background-position: -160px -47px
+
+.sprite-prev
+  width: 16px
+  height: 27px
+  background-position: -164px -102px
+
+.sprite-next
+  width: 16px
+  height: 27px
+  background-position: -160px -65px
+
+
+
+
+// imports //
+
+@import 'media'
+@import 'media-objects'
