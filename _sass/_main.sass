@@ -1,0 +1,89 @@
+
+@import 'media'
+@import 'media-objects'
+
+/* font-family: "Lato" */
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,300)
+//@import 'fonts'
+
+
+$font-size-base: 18
+$font-family-base: Lato, sans-serif
+$color-base: #767e9e
+$color-title: #666d89
+$scarlet: #eb5055
+$sapphire: #303441
+$light-grey: #f2f2f2
+
+
+$max-width: 1020
+
+
+@mixin font-size-em($size)
+  font-size: $size / $font-size-base * 1em
+
+@mixin line-height-em($size)
+  line-height: $size / $font-size-base * 1em
+
+*
+  margin: 0
+  padding: 0
+
+
+// placeholders //
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+
+body input:required:valid,
+body textarea:required:valid
+
+body
+  font-family: $font-family-base
+  font-size: $font-size-base * 1px
+  color: $color-base
+  line-height: 25px
+  letter-spacing: 10/1000*1em
+
+
+h2
+  @include font-size-em(30)
+  font-weight: 900
+  margin-bottom: 31px
+
+h3
+  @include font-size-em(18)
+  font-weight: 900
+  margin-bottom: 15px
+
+p
+  margin-bottom: 46px
+  font-weight: 300
+
+small
+  font-weight: 400
+  @include font-size-em(12)
+  line-height: 1.3em
+
+.container
+  max-width: $max-width * 1px
+
+.hidden
+  display: none

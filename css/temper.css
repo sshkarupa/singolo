@@ -1,0 +1,117 @@
+.logo {
+  font: 700 18.03px / 4.56px Lato;
+  color: #ee5052; /* star */
+}
+.top-menu {
+  color: #eb5055;
+  font: 700 8.66px / 4.56px Lato;
+  background-color: #303441;
+}
+.header {
+  height: 89px;
+  background-color: #303441;
+  color: #ffffff;
+}
+
+
+.h1 {
+  color: #666d89;
+  font: 900 7.66px / 4.56px Lato; /* Our Service */
+}
+p {
+  color: #767e9e;
+  font: 300 18px / 30px Lato;
+}
+
+.h3 {   /* Custom Design */
+  color: #666d89;
+  font: 900 4.6px / 4.56px Lato;
+}
+
+.jumbotron {
+  background-color: #eb5055;
+}
+
+.h3 > p {
+  color: #767e9e;
+  font: 400 12px / 21.56px Lato;
+}
+
+.portfolio h2 {
+  color: #666d89;
+  font: 900 7.66px / 4.56px Lato;
+  background-color: #303441;
+}
+.portfolio > p {
+  color: #767e9e;
+  font: 300 18px / 30px Lato;
+}
+.lables {
+  color: #dedede;
+  font: 400 12px / 21.56px Lato;
+}
+
+.about {
+  background-color: #f2f2f2;
+}
+
+.about h2 {
+  color: #666d89;
+  font: 900 7.66px / 4.56px Lato;
+}
+
+.about p {
+  color: #767e9e;
+  font: 300 18px / 30px Lato;
+}
+
+.name { /* Adam Jensen */
+  color: #666d89;
+  font: 900 4.6px / 4.56px Lato;
+}
+.name p {
+  color: #767e9e;
+  font: 400 12px / 21.56px Lato;
+}
+
+.contact {
+  background-color: #eb5055;
+  color: #f0d8d9;
+}
+
+.contact > h2 {
+  color: #f0d8d9;
+  font: 900 7.66px / 4.56px Lato;
+}
+
+.contact p {
+  color: #f0d9da;
+  font: 300 18px / 30px Lato;
+}
+
+.contact_information h4 {
+  color: #f0d8d9;
+  font: 900 4.6px / 4.56px Lato;
+}
+
+.contact_information text {
+  color: #f0d8d9;
+  font: 400 12px / 21.56px Lato;
+}
+
+.forms { /* Name (Required) */
+  color: #f48c8f;
+  font: 400 12px / 21.56px Lato;
+  background-color: #ca4549;
+}
+
+footer {
+  height: 76px;
+  background-color: #303441;
+  width: 1020px;
+}
+
+.footer__copyright {
+  color: #494e62;
+  font: 400 8.66px / 4.56px Lato;
+}
