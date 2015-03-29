@@ -12,7 +12,7 @@
   <link rel="shortcut icon" href="favicon.png" />
   <link rel="stylesheet" href="libs/bootstrap/bootstrap-grid-3.3.1.min.css" />
   <link rel="stylesheet" href="libs/font-awesome-4.3.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="libs/owl-carousel/owl.carousel.css" />
+  <link rel="stylesheet" href="libs/owl/assets/owl.carousel.css" />
 
 
   <link rel="stylesheet" href="css/main.css" />
@@ -32,7 +32,6 @@
               <i class="fa fa-bars"></i>
             </button>
             <nav class="main-menu">
-
               <ul>
                 <li class="active"><a href="#home">Home</a></li>
                 <li><a href="#our_services">Services</a></li>
@@ -53,15 +52,13 @@
       <div class="wrapper">
         <div class="row">
           <div class="col-sm-12">
-            <div id="show" class="carousel">
-              <div class="prev-narrow">
-                <i class="sprite sprite-prev"></i>
+            <div class="carousel">
+
+              <div class="item_slide">
+                <img src="images/slider1.png" class="img-responsive" alt="">
               </div>
-              <div class="slide">
-                  <img src="images/slider.png" class="img-responsive" alt="">
-              </div>
-              <div class="next-narrow">
-                <i class="sprite sprite-next"></i>
+              <div class="item_slide">
+                <img src="images/slider2.png" class="img-responsive" alt="">
               </div>
             </div>
           </div>
@@ -76,17 +73,20 @@
 
 <!--
 
-          <div id="owl-demo" class="owl-carousel owl-theme">
-            <div class="item">
-
-              <img src="images/phone_vertical.png" alt="">
-              <img src="images/phone_horizontal.png" alt="">
+            <div class="carousel">
+              <div class="prev-narrow">
+                <i class="sprite sprite-prev"></i>
+              </div>
+              <div class="slide">
+                  <img src="images/slider1.png" class="img-responsive" alt="">
+              </div>
+              <div class="slide hidden">
+                <img src="images/slider2.png" class="img-responsive" alt="">
+              </div>
+              <div class="next-narrow">
+                <i class="sprite sprite-next"></i>
+              </div>
             </div>
-            <div class="item">
-              <img src="images/phone_vertical.png" alt="">
-              <img src="images/phone_horizontal.png" alt="">
-            </div>
-          </div>
 
 -->
 
@@ -355,8 +355,8 @@
   <script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
   <script src="libs/respond/respond.min.js"></script>
   <![endif]-->
-  <script src="libs/owl-carousel/owl.carousel.min.js"></script>
   <script src="libs/jquery/jquery-1.11.1.min.js"></script>
+    <script src="libs/owl/owl.carousel.min.js"></script>
   <script src="js/common.js"></script>
 
 </body>

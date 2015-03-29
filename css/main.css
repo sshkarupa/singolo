@@ -103,13 +103,20 @@ small {
   display: inline;
   width: 100%; }
 
-#owl-demo .item img {
-  display: block;
-  width: 100%;
-  height: auto; }
+.item_slide {
+  margin: 0 54px;
+  color: white; }
 
-.slide {
-  margin: 0 54px; }
+.owl-nav div {
+  background-image: url(../img/prev.png);
+  width: 16px;
+  height: 27px;
+  top: 50%;
+  position: absolute; }
+  .owl-nav div.owl-next {
+    background-image: url(../img/next.png);
+    right: 0;
+    background-position: top right; }
 
 .prev-narrow, .next-narrow {
   position: absolute;
@@ -176,9 +183,6 @@ small {
 .person__description {
   margin-bottom: 26px;
   min-height: 75px; }
-  @media screen and (max-width: 768px) {
-    .person__description {
-      min-height: 0; } }
 
 .person__social {
   float: left;
@@ -341,6 +345,14 @@ footer {
   height: 27px;
   background-position: -160px -65px; }
 
+.sprite-facebook:hover,
+.sprite-google:hover,
+.sprite-linkedin:hover,
+.sprite-twitter:hover,
+.sprite-prev:hover,
+.sprite-next:hover {
+  opacity: 0.6; }
+
 /*==========  Desktop First Method  ========== */
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */
@@ -356,7 +368,10 @@ footer {
       margin-top: 10px;
       margin-left: -13px; }
       .main-menu ul li {
-        display: block; } }
+        display: block; }
+
+  .person__description {
+    min-height: 0; } }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   .footer__social, .footer_copyright {

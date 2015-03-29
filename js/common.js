@@ -1,7 +1,31 @@
-$(document).ready(function() {
 
+var main = function(){
+
+	// toggle menu
 	$('.menu-button').click(function(){
 		$('.main-menu ul').slideToggle();
+	});
+
+
+  //smooth scroll function
+   $('a[href^="#"]').click(function () {
+     elementClick = $(this).attr("href");
+     destination = $(elementClick).offset().top;
+     $('html,body').animate( { scrollTop: destination }, 1000 );
+     return false;
+   });
+
+
+	$(".carousel").owlCarousel({
+		responsive : {
+			0 : {
+				loop : true,
+				items : 1,
+				nav : true,
+				rewindNav : true
+			}
+		},
+		navText : ""
 	});
 
 
@@ -27,4 +51,7 @@ $(document).ready(function() {
 		});
 	});
 
-});
+};
+
+
+$(document).ready(main);
